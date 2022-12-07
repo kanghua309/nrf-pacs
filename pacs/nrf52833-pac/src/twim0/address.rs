@@ -37,12 +37,12 @@ impl From<crate::W<ADDRESS_SPEC>> for W {
 #[doc = "Field `ADDRESS` reader - Address used in the TWI transfer"]
 pub type ADDRESS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADDRESS` writer - Address used in the TWI transfer"]
-pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDRESS_SPEC, u8, u8, 7, O>;
+pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDRESS_SPEC, u8, u8, 8, O>;
 impl R {
     #[doc = "Bits 0:6 - Address used in the TWI transfer"]
     #[inline(always)]
     pub fn address(&self) -> ADDRESS_R {
-        ADDRESS_R::new((self.bits & 0x7f) as u8)
+        ADDRESS_R::new((self.bits & 0x8f) as u8)
     }
 }
 impl W {
